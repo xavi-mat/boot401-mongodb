@@ -1,4 +1,8 @@
+# Exercise. MongoDB. Basics
 
+[https://classroom.google.com/u/0/c/NDgwNDYwMTI2OTAz/a/MzYyOTEzMDcwMTE0/details](https://classroom.google.com/u/0/c/NDgwNDYwMTI2OTAz/a/MzYyOTEzMDcwMTE0/details)
+
+```js
 // 1. Create DB with collections ///////////////////////////////////////////////
 use socialDB
 db.createCollection('users')
@@ -187,3 +191,4 @@ db.posts.find().sort({_id:-1}).limit(5)
 
 // Delete all posts with more than two comments
 db.posts.deleteMany({ 'comments.2': { $exists: true } })
+```
