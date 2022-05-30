@@ -106,6 +106,7 @@ db.posts.updateOne({ title: "Title 1" },
     { $set: { body: "Post body 1 updated" } })
 
 // - - Update comment: Change the body of a comment
+// VERSION 1: Overwrite all array with the single change
 db.posts.updateOne({ title: "Title 1" },
     {
         $set: {
@@ -114,6 +115,8 @@ db.posts.updateOne({ title: "Title 1" },
             ]
         }
     })
+// VERSION 2: Update only the needed field of a specific object inside the array
+db.posts.update({title:"Title 1"}, {$set: {"comments.1.body": "comment body 1.2 UPDATED inside"}})
 
 
 // - Update users
@@ -173,9 +176,7 @@ db.users.deleteMany({ age: { $gt: 20 } })
 
 
 // 3. Extra ////////////////////////////////////////////////////////////////////
-// Seleccione el número total de publicaciones que tienen más de un comentario
 // Get count of posts with more than two posts
-db.posts.aggregate()
 db.posts.find({'comments.2':{$exists: true}}).count()
 
 // Get last created post
