@@ -14,63 +14,83 @@ db.createCollection('posts')
 db.posts.insertMany([
     {
         title: "Title 1", body: "Post body 1", username: "user1", comments: [
-            { username: "user2", body: "comment body 1.1" }, { username: "user3", body: "comment body 1.2" }]
+            { username: "user2", body: "comment body 1.1" },
+            { username: "user3", body: "comment body 1.2" }]
     },
     {
         title: "Title 2", body: "Post body 2", username: "user2", comments: [
-            { username: "user4", body: "comment body 2.1" }, { username: "user5", body: "comment body 2.2" }]
+            { username: "user4", body: "comment body 2.1" },
+            { username: "user5", body: "comment body 2.2" }]
     },
     {
         title: "Title 3", body: "Post body 3", username: "user3", comments: [
-            { username: "user6", body: "comment body 3.1" }, { username: "user7", body: "comment body 3.2" }]
+            { username: "user6", body: "comment body 3.1" },
+            { username: "user7", body: "comment body 3.2" }]
     },
     {
         title: "Title 4", body: "Post body 4", username: "user4", comments: [
-            { username: "user8", body: "comment body 4.1" }, { username: "user9", body: "comment body 4.2" }, { username: "user10", body: "comment body 4.3" }]
+            { username: "user8", body: "comment body 4.1" },
+            { username: "user9", body: "comment body 4.2" },
+            { username: "user10", body: "comment body 4.3" }]
     },
     {
         title: "Title 5", body: "Post body 5", username: "user5", comments: [
-            { username: "user10", body: "comment body 5.1" }, { username: "user11", body: "comment body 5.2" }, { username: "user12", body: "comment body 5.3" }, { username: "user13", body: "comment body 5.4" }]
+            { username: "user10", body: "comment body 5.1" },
+            { username: "user11", body: "comment body 5.2" },
+            { username: "user12", body: "comment body 5.3" },
+            { username: "user13", body: "comment body 5.4" }]
     },
     {
         title: "Title 6", body: "Post body 6", username: "user6", comments: [
-            { username: "user12", body: "comment body 6.1" }, { username: "user13", body: "comment body 6.2" }]
+            { username: "user12", body: "comment body 6.1" },
+            { username: "user13", body: "comment body 6.2" }]
     },
     {
         title: "Title 7", body: "Post body 7", username: "user7", comments: [
-            { username: "user14", body: "comment body 7.1" }, { username: "user15", body: "comment body 7.2" }]
+            { username: "user14", body: "comment body 7.1" },
+            { username: "user15", body: "comment body 7.2" }]
     },
     {
         title: "Title 8", body: "Post body 8", username: "user8", comments: [
-            { username: "user1", body: "comment body 8.1" }, { username: "user2", body: "comment body 8.2" }]
+            { username: "user1", body: "comment body 8.1" },
+            { username: "user2", body: "comment body 8.2" }]
     },
     {
         title: "Title 9", body: "Post body 9", username: "user9", comments: [
-            { username: "user3", body: "comment body 9.1" }, { username: "user4", body: "comment body 9.2" }]
+            { username: "user3", body: "comment body 9.1" },
+            { username: "user4", body: "comment body 9.2" }]
     },
     {
         title: "Title 10", body: "Post body 10", username: "user10", comments: [
-            { username: "user5", body: "comment body 10.1" }, { username: "user6", body: "comment body 10.2" }]
+            { username: "user5", body: "comment body 10.1" },
+            { username: "user6", body: "comment body 10.2" }]
     },
     {
         title: "Title 11", body: "Post body 11", username: "user11", comments: [
-            { username: "user7", body: "comment body 11.1" }, { username: "user8", body: "comment body 11.2" }, { username: "user9", body: "comment body 11.3" }, { username: "user10", body: "comment body 11.4" }]
+            { username: "user7", body: "comment body 11.1" },
+            { username: "user8", body: "comment body 11.2" },
+            { username: "user9", body: "comment body 11.3" },
+            { username: "user10", body: "comment body 11.4" }]
     },
     {
         title: "Title 12", body: "Post body 12", username: "user12", comments: [
-            { username: "user9", body: "comment body 12.1" }, { username: "user10", body: "comment body 12.2" }]
+            { username: "user9", body: "comment body 12.1" },
+            { username: "user10", body: "comment body 12.2" }]
     },
     {
         title: "Title 13", body: "Post body 13", username: "user13", comments: [
-            { username: "user11", body: "comment body 13.1" }, { username: "user12", body: "comment body 13.2" }]
+            { username: "user11", body: "comment body 13.1" },
+            { username: "user12", body: "comment body 13.2" }]
     },
     {
         title: "Title 14", body: "Post body 14", username: "user14", comments: [
-            { username: "user13", body: "comment body 14.1" }, { username: "user14", body: "comment body 14.2" }]
+            { username: "user13", body: "comment body 14.1" },
+            { username: "user14", body: "comment body 14.2" }]
     },
     {
         title: "Title 15", body: "Post body 15", username: "user15", comments: [
-            { username: "user15", body: "comment body 15.1" }, { username: "user1", body: "comment body 15.2" }]
+            { username: "user15", body: "comment body 15.1" },
+            { username: "user1", body: "comment body 15.2" }]
     },
 
 ])
@@ -101,7 +121,8 @@ db.posts.updateOne({ title: "Title 7" },
     {
         $set: {
             title: "Title 7 updated", body: "Post body 7 updated", username: "user5", comments: [
-                { username: "user3", body: "comment body 7.1 Updated" }, { username: "user2", body: "comment body 7.2 Updated" }]
+                { username: "user3", body: "comment body 7.1 Updated" },
+                { username: "user2", body: "comment body 7.2 Updated" }]
         }
     })
 
@@ -115,12 +136,14 @@ db.posts.updateOne({ title: "Title 1" },
     {
         $set: {
             comments: [
-                { username: "user2", body: "comment body 1.1 updated" }, { username: "user3", body: "comment body 1.2" }
+                { username: "user2", body: "comment body 1.1 updated" },
+                { username: "user3", body: "comment body 1.2" }
             ]
         }
     })
 // VERSION 2: Update only the needed field of a specific object inside the array
-db.posts.update({title:"Title 1"}, {$set: {"comments.1.body": "comment body 1.2 UPDATED inside"}})
+db.posts.update({title:"Title 1"},
+    {$set: {"comments.1.body": "comment body 1.2 UPDATED inside"}})
 
 
 // - Update users
