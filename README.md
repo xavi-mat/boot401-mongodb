@@ -120,9 +120,13 @@ db.users.insertMany([
 db.posts.updateOne({ title: "Title 7" },
     {
         $set: {
-            title: "Title 7 updated", body: "Post body 7 updated", username: "user5", comments: [
+            title: "Title 7 updated",
+            body: "Post body 7 updated",
+            username: "user5",
+            comments: [
                 { username: "user3", body: "comment body 7.1 Updated" },
-                { username: "user2", body: "comment body 7.2 Updated" }]
+                { username: "user2", body: "comment body 7.2 Updated" }
+            ]
         }
     })
 
@@ -152,8 +156,14 @@ db.users.updateOne({ username: "user1" },
     { $set: { username: "user1updated", email: "user1updated@mail.com", age: 7 } })
 
 // - - Change email of two users
-db.users.updateOne({ username: "user2" }, { $set: { email: "user2updated@mail.com" } })
-db.users.updateOne({ username: "user3" }, { $set: { email: "user3updated@mail.com" } })
+db.users.updateOne(
+    { username: "user2" },
+    { $set: { email: "user2updated@mail.com" } }
+)
+db.users.updateOne(
+    { username: "user3" },
+    { $set: { email: "user3updated@mail.com" } }
+)
 
 // - - Increase on 5 years the age of a user
 db.users.updateOne({ username: "user4" }, { $inc: { age: 5 } })
