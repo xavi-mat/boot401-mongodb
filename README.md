@@ -146,7 +146,7 @@ db.posts.updateOne({ title: "Title 1" },
         }
     })
 // VERSION 2: Update only the needed field of a specific object inside the array
-db.posts.update({title:"Title 1"},
+db.posts.updateOne({title:"Title 1"},
     {$set: {"comments.1.body": "comment body 1.2 UPDATED inside"}})
 
 
